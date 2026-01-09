@@ -32,7 +32,7 @@ function Acceuil(props){
            <input className="barre_recherche" type="text" name="barre" value={nom}  onChange={changer}   placeholder="entrer le nom du cours ou de l'epreuve que vous voulez" />
            <button onClick={rechercher} className="search" title="cliquer pour rechercher" ></button>
         </section>
-        <Link to="http://localhost:3000/ajout_user" className="ajouter_produit">ajouter un element</Link>
+        <Link to="https://serveur-search.onrender.com/ajout_user" className="ajouter_produit">ajouter un element</Link>
       </main> 
      );
  }

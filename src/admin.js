@@ -18,7 +18,7 @@ function AdmListe(props,refs){
  
  var merci=async ()=>{
  try{
-         var reponse= await axios.get("http://localhost:8080/affichage");
+         var reponse= await axios.get("https://serveur-search.onrender.com/affichage");
            
             setliste(reponse.data);
             console.dir(reponse.data);
@@ -68,7 +68,7 @@ useEffect(()=>{
 
                 if(e.currentTarget===val){
 
-                    var reponse= await axios.post("http://localhost:8080/supprimer",{id:val.className});
+                    var reponse= await axios.post("https://serveur-search.onrender.com/supprimer",{id:val.className});
                     console.log(index);
                     if(reponse){
                            merci();

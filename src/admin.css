@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,html{
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+body{
+
+   background-image: url('/public/brique.jpg');
+   background-repeat: no-repeat;
+   background-size: cover ;
+   background-attachment: fixed;
+    position: relative;
+
+}
+
+th,.cellule{
+
+    border: 1px black solid;
+    text-align: center;
+}
+
+table{
+    width: 98%;
+    position: absolute;
+    top: 0;
+    border-collapse: collapse;
+    background-color: blueviolet;
+}
+
+.p_ajout{
+    width: 98%;
+     margin-top: 25em;
+    background-color: chartreuse;
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+.ajout{
+    
+    width: 6em;
+    height: 2em;
+}
+
+
+
+#root{
+   /* background-color: aquamarine;*/
+    display: flex;
+    flex-direction: column;
+}

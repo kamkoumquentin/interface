@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: relative;
+
+}
+
+
+
+
+.form{
+
+width: 70%;
+height: 30em;
+background-color: burlywood;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.input{
+
+    width: 80%;
+    height: 3em;
+    border-radius: 5px 5px 5px 5px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.fichier{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 3em;
+   
+
+
+}
+
+
+
+.conf{
+
+    width: 8em;
+    height: 3em;
+    border: 2px solid rgba(0, 0, 0, 0.322);
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, 0.466);
+
+}
+
+.b_groupe{
+
+background-color: blueviolet;
+width: 60%;
+display: flex;
+justify-content: space-evenly;
+
+}
+
+
+#root{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+

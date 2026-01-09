@@ -1,0 +1,126 @@
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
+import {useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+ 
+
+
+function Affiche(props){
+  
+     var valeur=useLocation();
+      var [tab,settab]= useState([]);
+      var [champs,setchamp]=useState(valeur.state);
+      var aller= useNavigate();
+
+       useEffect(()=>{
+        var debut=  async ()=>{   
+          var part = await axios.get("https://serveur-search.onrender.com/envoi/"+valeur.state);
+          window.history.replaceState({}, document.title);
+           console.log(part.data);
+          settab(part.data);
+          
+        }
+        debut();
+
+       },[valeur]);
+
+   
+      
+    
+
+
+   var envoi=async (e)=>{
+
+               if(champs.length!=0){
+
+                  aller('/resultat/',{state : champs});
+                    console.log('appuyer');
+               }
+   }
+
+
+
+
+if( Array.isArray(tab) && tab.length!= 0){
+
+return(
+<>
+    <header> 
+        <h1 className="titre" onClick={()=>(aller('/'))} >CoursSearch</h1>   
+        <section className="main2">
+           <input className="barre_recherche2" onKeyDown={(e)=>{ if(e.key=="Enter"){envoi()} }} type="text"  value={champs} onChange={(e)=>{setchamp(e.target.value);}}  name="nom"  /><button onClick={envoi} className="search2" title="cliquer pour rechercher" ></button>
+        </section>
+     </header>
+            
+      <main class="corps_resul" aria-placeholder="dvvv">
+          
+          {
+       
+            
+             tab.map((valeur,index)=>{
+
+          
+             return(
+     
+    <div className="produit" id={"per"+index}>
+    <img className="representation"  src="/livre.png" alt={valeur.lien}/>
+    <section className="corps_result1">
+       <h2 className="titre1">{valeur.nom}</h2>
+       <p className="auteur">par {valeur.auteur}</p>
+       <p className="description">{valeur.description}</p>
+       <p className="bouton3"><button className="tele" title="lancer le telechargement" ><a href={`http://localhost:8080/telecharger/${valeur.lien.split('/').pop()}`}>telecharger</a></button></p>
+    </section>
+    </div>
+
+             )
+           
+
+            
+            
+
+             })
+            } 
+
+                  
+           
+      </main>
+
+</>)
+
+
+ }
+ else{
+
+   return(
+<>
+              
+    <header> 
+        <h1 className="titre" onClick={()=>(aller('/'))} >CoursSearch</h1>   
+        <section className="main2">
+           <input className="barre_recherche2" onKeyDown={(e)=>{ if(e.key=="Enter"){envoi()} }} type="text"  value={champs} onChange={(e)=>{setchamp(e.target.value);}}  name="nom"  /><button onClick={envoi} className="search2" title="cliquer pour rechercher" ></button>
+        </section>
+     </header>
+            
+      <main class="corps_result" aria-placeholder="dvvv">
+          
+          
+            <h1 className="no_result">aucun resultat pour le moment</h1> 
+
+            
+       
+      </main>
+
+</>)
+
+   
+    
+
+ }
+}
+
+
+
+export default Affiche;

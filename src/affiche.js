@@ -71,7 +71,7 @@ return(
        <h2 className="titre1">{valeur.nom}</h2>
        <p className="auteur">par {valeur.auteur}</p>
        <p className="description">{valeur.description}</p>
-       <p className="bouton3"><button className="tele" title="lancer le telechargement" ><a href={`http://localhost:8080/telecharger/${valeur.lien.split('/').pop()}`}>telecharger</a></button></p>
+       <p className="bouton3"><button className="tele" title="lancer le telechargement" ><a href={`https://serveur-search.onrender.com/telecharger/${valeur.lien.split('/').pop()}`}>telecharger</a></button></p>
     </section>
     </div>
 

@@ -42,15 +42,23 @@ var fichier = async (e) => {
   try {
     const res = await axios.post(
       'https://serveur-search.onrender.com/gestion',
-      donne,
-      { headers: { "Content-Type": "multipart/form-data" } }
+      donne
     );
 
     settab([{ ...tab[0], lien: res.data.path }]);
     console.log(res.data.path);
 
   } catch (er) {
-    console.log(er);
+
+     if (er.response) {
+    console.log("Erreur serveur :", er.response.data);
+  } else if (er.request) {
+    console.log("Pas de réponse du serveur");
+  } else {
+    console.log("Erreur :", er.message);
+  }
+
+    
   }
 };
 

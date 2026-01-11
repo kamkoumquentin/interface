@@ -15,12 +15,14 @@ var naviger=useNavigate();
 
 var ajouter=async (e)=>{
 
-   e.preventDefault();
+              if(tab[0].lien){
+
                     console.dir({...tab[0]})     
     var rep= await axios.post("https://serveur-search.onrender.com/ajouter",{...tab[0]});
              if(rep){
        naviger("/");
              }
+              }
 }
 
 var retour=(e)=>{

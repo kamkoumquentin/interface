@@ -27,7 +27,14 @@ function Affiche(props){
 
        },[valeur]);
 
-   
+
+           const getDownloadLink = (url) => {
+  // On insère 'fl_attachment' dans l'URL de Cloudinary
+  if (url.includes("cloudinary.com")) {
+    return url.replace("/upload/", "/upload/fl_attachment/");
+  }
+  return url;
+};
       
     
 
@@ -71,7 +78,7 @@ return(
        <h2 className="titre1">{valeur.nom}</h2>
        <p className="auteur">par {valeur.auteur}</p>
        <p className="description">{valeur.description}</p>
-       <p className="bouton3"><button className="tele" title="lancer le telechargement" ><a href={`https://serveur-search.onrender.com/telecharger/${valeur.lien.split('/').pop()}`}>telecharger</a></button></p>
+       <p className="bouton3"><button className="tele" title="lancer le telechargement" ><a href={getDownloadLink(valeur.lien)}  target="_blank" rel="noopener noreferrer" >  telecharger</a></button></p>
     </section>
     </div>
 

@@ -32,37 +32,25 @@ var retour=(e)=>{
 }
 
 
-var fichier=async(e)=>{
+var fichier = async (e) => {
 
+  var donne = new FormData();
+  donne.append('lien', e.target.files[0]);
 
-      var donne= new FormData();
-      donne.append('lien',e.target.files[0]);
+  try {
+    const res = await axios.post(
+      'https://serveur-search.onrender.com/gestion',
+      donne,
+      { headers: { "Content-Type": "multipart/form-data" } }
+    );
 
-      try{
+    settab([{ ...tab[0], lien: res.data.path }]);
+    console.log(res.data.path);
 
-       const res= await axios.post('https://serveur-search.onrender.com/gestion',
-                  donne,
-                         {  
-                              headers: {"Content-Type":"multipart/form-data"}
-                         }                
-             );
-              
-             settab([{...tab[0],lien: res.data.path}])
-
-             console.log(res.data.path);
-
-      }
-      catch(er){
-
-            console.log(er);
-
-      }
-
-
-
-
-
-}
+  } catch (er) {
+    console.log(er);
+  }
+};
 
 
 

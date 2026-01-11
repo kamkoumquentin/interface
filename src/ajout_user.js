@@ -34,7 +34,6 @@ var retour=(e)=>{
 
 var fichier=async(e)=>{
 
-      e.preventDefault();
 
       var donne= new FormData();
       donne.append('lien',e.target.files[0]);

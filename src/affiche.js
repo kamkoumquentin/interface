@@ -78,7 +78,7 @@ return(
        <h2 className="titre1">{valeur.nom}</h2>
        <p className="auteur">par {valeur.auteur}</p>
        <p className="description">{valeur.description}</p>
-       <p className="bouton3"><button className="tele" title="lancer le telechargement" ><a href={getDownloadLink(valeur.lien)}  target="_blank" rel="noopener noreferrer" >  telecharger</a></button></p>
+       <p className="bouton3"><button className="tele" title="lancer le telechargement" ><a href={getDownloadLink(valeur.lien)}  target="_blank" rel="noopener noreferrer" download >  telecharger</a></button></p>
     </section>
     </div>
 

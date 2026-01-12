@@ -35,33 +35,22 @@ var retour=(e)=>{
 
 
 var fichier = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
 
-  var donne = new FormData();
-  donne.append('lien', e.target.files[0]);
+    const donne = new FormData();
+    donne.append('lien', file);
 
-  try {
-    const res = await axios.post(
-      'https://serveur-search.onrender.com/gestion',
-      donne
-    );
-
-    settab([{ ...tab[0], lien: res.data.path }]);
-    console.log(res.data.path);
-
-  } catch (er) {
-
-     if (er.response) {
-    console.log("Erreur serveur :", er.response.data);
-  } else if (er.request) {
-    console.log("Pas de réponse du serveur");
-  } else {
-    console.log("Erreur :", er.message);
-  }
-
-    
-  }
+    try {
+        const res = await axios.post('https://serveur-search.onrender.com/gestion', donne);
+        // On met à jour l'état seulement si le serveur répond 200
+        settab([{ ...tab[0], lien: res.data.path }]);
+    } catch (er) {
+        // Si ça crash, on attrape l'erreur ici au lieu de laisser l'app planter
+        console.error("L'upload a échoué :", er.response ? er.response.data : er.message);
+        alert("Erreur lors de l'envoi du fichier au serveur.");
+    }
 };
-
 
 
 

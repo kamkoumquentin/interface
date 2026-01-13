@@ -41,7 +41,7 @@ code {
   background-repeat: no-repeat;
   background-size: cover ;
  
-  color: #EDEDED;
+  color: black;
 
 }
 
@@ -60,7 +60,7 @@ code {
   background-repeat: no-repeat;
   background-size: cover ;
   /*background-color: #0B0B0B;  */
-  color: #EDEDED;
+
 
 }
 
@@ -286,7 +286,7 @@ margin-top: 3em;
 
 #per1{
 
-    margin-top: 18em;
+    margin-top: 3em;
 }
 
 /*nouveaux*/

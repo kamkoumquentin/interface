@@ -98,7 +98,7 @@ code {
     
     width: 90%;
     height: 3em;
- /*   background-color: brown;*/
+     color: black;
     z-index: 1;
     border-radius: 8px 0px 0px 8px;
     text-align: center;

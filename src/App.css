@@ -95,7 +95,7 @@ code {
 
 
 .barre_recherche{
-    
+    color : black;
     width: 90%;
     height: 3em;
     z-index: 1;

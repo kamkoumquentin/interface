@@ -192,11 +192,15 @@ justify-content: center;
 
 
 .corps_resul{
-
-  width: 100%;
-  position: relative;
-  margin-top : 12em;
-
+  min-height: 100vh;
+    position: absolute;
+    top: -17em;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 

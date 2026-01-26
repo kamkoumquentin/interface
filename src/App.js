@@ -17,7 +17,7 @@ function App() {
      <Routes>
        
        <Route path='/' element={<Acceuil titre="CourSearch"/>} />
-       <Route path='/resultat/' element={<Affiche/>}/>
+       <Route path='/resultat/:val' element={<Affiche/>}/>
        <Route path='/admin_acceuil' element={<AdmListe/>} />
        <Route path='/modifier/:id' element={<Modifier/>}  />
        <Route path='/ajouter' element={<Ajout/>} />

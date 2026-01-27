@@ -14,7 +14,7 @@ function Acceuil(props){
   var rechercher=(e)=>{
             
      if(nom!=""){
-      url('/resultat/',{state: nom});
+      url('/resultat/'+nom);
      }
   }
 

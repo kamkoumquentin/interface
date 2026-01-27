@@ -10,14 +10,14 @@ import { useLocation } from "react-router-dom";
 
 function Affiche(props){
   
-     var valeur=useParams();
+     const {val}=useParams();
       var [tab,settab]= useState([]);
       var [champs,setchamp]=useState(valeur.val);
       var aller= useNavigate();
 
        useEffect(()=>{
         var debut=  async ()=>{   
-          var part = await axios.get("https://serveur-search.onrender.com/envoi/"+valeur.val);
+          var part = await axios.get("https://serveur-search.onrender.com/envoi/"+val);
           window.history.replaceState({}, document.title);
            console.log(part.data);
           settab(part.data);

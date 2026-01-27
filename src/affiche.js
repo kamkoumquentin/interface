@@ -10,9 +10,9 @@ import { useLocation } from "react-router-dom";
 
 function Affiche(props){
   
-     const {val}=useParams();
+      var {val}=useParams();
       var [tab,settab]= useState([]);
-      var [champs,setchamp]=useState(valeur.val);
+      var [champs,setchamp]=useState(val);
       var aller= useNavigate();
 
        useEffect(()=>{
@@ -25,7 +25,7 @@ function Affiche(props){
         }
         debut();
 
-       },[valeur]);
+       },[val]);
 
 
            const getDownloadLink = (url) => {

@@ -11,7 +11,7 @@ function Acceuil(props){
     var [nom,setnom]=useState("");
     
 
-  var rechercher=asynch(e)=>{
+  var rechercher=async(e)=>{
             
      if(nom!=""){
       url('/resultat/'+nom);  

@@ -4,17 +4,18 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import axios from "axios";
 function Acceuil(props){
 
     var url=useNavigate();
     var [nom,setnom]=useState("");
     
 
-  var rechercher=(e)=>{
+  var rechercher=asynch(e)=>{
             
      if(nom!=""){
       url('/resultat/'+nom);
+         await axios.get('')
      }
   }
 

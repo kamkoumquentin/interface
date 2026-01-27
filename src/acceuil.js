@@ -14,8 +14,7 @@ function Acceuil(props){
   var rechercher=asynch(e)=>{
             
      if(nom!=""){
-      url('/resultat/'+nom);
-         await axios.get('')
+      url('/resultat/'+nom);  
      }
   }
 

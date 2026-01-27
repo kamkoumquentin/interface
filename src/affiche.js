@@ -10,14 +10,14 @@ import { useLocation } from "react-router-dom";
 
 function Affiche(props){
   
-     var valeur=useLocation();
+     var valeur=useParams();
       var [tab,settab]= useState([]);
-      var [champs,setchamp]=useState(valeur.state);
+      var [champs,setchamp]=useState(valeur.val);
       var aller= useNavigate();
 
        useEffect(()=>{
         var debut=  async ()=>{   
-          var part = await axios.get("https://serveur-search.onrender.com/envoi/"+valeur.state);
+          var part = await axios.get("https://serveur-search.onrender.com/envoi/"+valeur.val);
           window.history.replaceState({}, document.title);
            console.log(part.data);
           settab(part.data);
@@ -43,7 +43,8 @@ function Affiche(props){
 
                if(champs.length!=0){
 
-                  aller('/resultat/',{state : champs});
+                  aller('/resultat/'+champs);
+                
                     console.log('appuyer');
                }
    }

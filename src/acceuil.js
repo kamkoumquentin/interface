@@ -32,7 +32,7 @@ function Acceuil(props){
            <input className="barre_recherche" type="text" name="barre" value={nom}  onChange={changer}   placeholder="entrer le nom du cours ou de l'epreuve que vous voulez" />
            <button onClick={rechercher} className="search" title="cliquer pour rechercher" ></button>
         </section>
-        <Link to="/ajout_user" className="ajouter_produit">ajouter un element</Link>
+        <Link to="/ajout_user" className="ajouter_produit">Contribuer un Savoir</Link>
       </main> 
      );
  }

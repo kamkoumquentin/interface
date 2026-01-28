@@ -18,7 +18,7 @@ var ajouter=async (e)=>{
               if(tab[0].lien){
 
                     console.dir({...tab[0]})     
-    var rep= await axios.post("https://serveur-search.onrender.com/ajouter",{...tab[0]});
+    var rep= await axios.post("https://serveur-search.onrender.com/ajouter_t",{...tab[0]});
              if(rep){
        naviger("/");
              }

@@ -57,7 +57,7 @@ if( Array.isArray(tab) && tab.length!= 0){
 return(
 <>
     <header> 
-        <h1 className="titre" onClick={()=>(aller('/'))} >CoursSearch</h1>   
+        <h1 className="titre" onClick={()=>(aller('/'))} >Thinkcore</h1>   
         <section className="main2">
            <input className="barre_recherche2" onKeyDown={(e)=>{ if(e.key=="Enter"){envoi()} }} type="text"  value={champs} onChange={(e)=>{setchamp(e.target.value);}}  name="nom"  /><button onClick={envoi} className="search2" title="cliquer pour rechercher" ></button>
         </section>

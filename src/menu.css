@@ -1,8 +1,7 @@
-
 .liste{
-width: 75%;
 display: flex;
 justify-content: center;
 align-items: center;
+width: 75%;
 background-color: rgba(42, 126, 165, 0.342);
 }

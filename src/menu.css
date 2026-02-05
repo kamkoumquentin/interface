@@ -1,8 +1,1 @@
-.liste {
-  /* Assure que le calcul de la largeur inclut padding et bordures */
-  box-sizing: border-box; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(42, 126, 165, 0.342);
-}
+

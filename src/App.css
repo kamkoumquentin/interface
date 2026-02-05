@@ -369,13 +369,7 @@ height: 100%;
     background-color: whitesmoke;
 }
 
-.liste {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75%; /* Assure-toi qu'il y a bien le point-virgule ici */
-  background-color: rgba(42, 126, 165, 0.342);
-}
+
 /* POUR LA VERSION MOBILE */
 
 

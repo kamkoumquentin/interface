@@ -8,8 +8,6 @@ import AdmListe from './admin';
 import Modifier from './form_modifier';
 import Ajout from './ajout';
 import Add from './ajout_user';
-import Attente from './attente';
-import Menu from './menu_admin';
 
 
 function App() {
@@ -18,14 +16,12 @@ function App() {
     
      <Routes>
        
-       <Route path='/' element={<Acceuil titre="CourSearch"/>} />
-       <Route path='/resultat/' element={<Affiche/>}/>
+       <Route path='/' element={<Acceuil titre="ThinkCore"/>} />
+       <Route path='/resultat/:val' element={<Affiche/>}/>
        <Route path='/admin_acceuil' element={<AdmListe/>} />
        <Route path='/modifier/:id' element={<Modifier/>}  />
        <Route path='/ajouter' element={<Ajout/>} />
        <Route path='/ajout_user' element={<Add/>} />
-       <Route path='/attente' element={<Attente/>} />
-       <Route path='/menu' element={<Menu/>}/>
     </Routes>
   
   )

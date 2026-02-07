@@ -53,8 +53,9 @@ useEffect(()=>{
    ( async ()=>{ try{
          
          var reponse= await axios.get('https://serveur-search.onrender.com/af/'+valeur.className);
-      
-              var rep= await axios.post("https://serveur-search.onrender.com/ajouter",{...reponse.data});
+                     const donnee= reponse.data;
+                        console.dir(donnee);
+              var rep= await axios.post("https://serveur-search.onrender.com/ajouter",donnee);
                 
             console.dir(rep);
             console.log('partie');

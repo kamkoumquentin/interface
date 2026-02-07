@@ -53,7 +53,7 @@ useEffect(()=>{
            //console.log(valeur.className);
   ( async ()=>{ try{
          
-         var reponse= await axios.get('https://serveur-search.onrender.com/af/'+valeur.className);
+         var reponse= await axios.get('https://serveur-search.onrender.com/af1/'+valeur.className);
                      const donnee= reponse.data;
                         console.dir(donnee);
   /*            var rep= await axios.post("https://serveur-search.onrender.com/ajouter",donnee);

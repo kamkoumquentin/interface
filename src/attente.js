@@ -50,7 +50,8 @@ useEffect(()=>{
 
           if(e.currentTarget===valeur){
 
-   ( async ()=>{ try{
+           console.log(valeur.className);
+  /* ( async ()=>{ try{
          
          var reponse= await axios.get('https://serveur-search.onrender.com/af/'+valeur.className);
                      const donnee= reponse.data;
@@ -65,7 +66,7 @@ useEffect(()=>{
 
          console.log('erreur bd '+err);
    }})()
-
+*/
 
 }
 

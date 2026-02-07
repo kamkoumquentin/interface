@@ -50,23 +50,23 @@ useEffect(()=>{
 
           if(e.currentTarget===valeur){
 
-           console.log(valeur.className);
-  /* ( async ()=>{ try{
+           //console.log(valeur.className);
+  ( async ()=>{ try{
          
          var reponse= await axios.get('https://serveur-search.onrender.com/af/'+valeur.className);
                      const donnee= reponse.data;
                         console.dir(donnee);
-              var rep= await axios.post("https://serveur-search.onrender.com/ajouter",donnee);
+  /*            var rep= await axios.post("https://serveur-search.onrender.com/ajouter",donnee);
                 
             console.dir(rep);
             console.log('partie');
-           
+    */       
    }
    catch(err){
 
          console.log('erreur bd '+err);
    }})()
-*/
+
 
 }
 

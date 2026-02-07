@@ -56,11 +56,10 @@ useEffect(()=>{
          var reponse= await axios.get('https://serveur-search.onrender.com/af1/'+valeur.className);
                      const donnee= reponse.data;
                         console.dir(donnee);
-  /*            var rep= await axios.post("https://serveur-search.onrender.com/ajouter",donnee);
+            var rep= await axios.post("https://serveur-search.onrender.com/ajouter",donnee[0]);
                 
             console.dir(rep);
-            console.log('partie');
-    */       
+            console.log('partie');      
    }
    catch(err){
 

@@ -8,6 +8,8 @@ import AdmListe from './admin';
 import Modifier from './form_modifier';
 import Ajout from './ajout';
 import Add from './ajout_user';
+import Menu from './menu_admin';
+import Attente from './attente';
 
 
 function App() {
@@ -22,6 +24,9 @@ function App() {
        <Route path='/modifier/:id' element={<Modifier/>}  />
        <Route path='/ajouter' element={<Ajout/>} />
        <Route path='/ajout_user' element={<Add/>} />
+       <Route path='/menu' element={<Menu/>}/>
+       <Route path='/attente' element={<Attente/>} />   
+
     </Routes>
   
   )

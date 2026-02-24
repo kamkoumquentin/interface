@@ -10,6 +10,7 @@ import Ajout from './ajout';
 import Add from './ajout_user';
 import Menu from './menu_admin';
 import Attente from './attente';
+import Liseuse from './liseuse';
 
 
 function App() {
@@ -25,8 +26,8 @@ function App() {
        <Route path='/ajouter' element={<Ajout/>} />
        <Route path='/ajout_user' element={<Add/>} />
        <Route path='/menu' element={<Menu/>}/>
-       <Route path='/attente' element={<Attente/>} />   
-
+       <Route path='/attente' element={<Attente/>} /> 
+       <Route path='/liseuse' element={<Liseuse/>} />  
     </Routes>
   
   )

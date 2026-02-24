@@ -369,13 +369,23 @@ height: 100%;
     background-color: whitesmoke;
 }
 
+.corpdf{
+
+margin-top: 30em;
+
+}
 /* POUR LA VERSION MOBILE */
 
 
 
 @media(max-width:480px){
 
+.corpdf{
 
+margin-top: 0;
+
+
+}
     
 header{
 
@@ -389,6 +399,9 @@ justify-content: center;
 background-color: #0F0F0F;
 
 color:  #EDEDED;
+
+
+
 }
 
 
@@ -412,15 +425,52 @@ justify-content: center;
     .titre{
     color:whitesmoke;
     font-weight: bold;
-    font-size: x-large;
+    font-size:medium;
     cursor: pointer;
    
 }
 
+.titre1{
+    margin: 0;
+    font-size: medium;
+    font-weight: bold;
+}
 
+.description{
+    margin: 1em 0 0 0;
+    font-size: medium;
+}
+
+.corps_resul{
+  min-height: 100vh;
+    position: absolute;
+    top: -25em;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 }
 
 
 
+@media(width:375px){
+
+.corps_resul{
+  min-height: 100vh;
+    position: absolute;
+    top: -15em;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+}

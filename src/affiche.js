@@ -36,7 +36,13 @@ function Affiche(props){
   return url;
 };
       
-    
+var prendre= (e)=>{
+
+
+  aller('/liseuse',{state:e.target.id });
+   
+
+}    
 
 
    var envoi=async (e)=>{
@@ -79,7 +85,7 @@ return(
        <h2 className="titre1">{valeur.nom}</h2>
        <p className="auteur">par {valeur.auteur}</p>
        <p className="description">{valeur.description}</p>
-       <p className="bouton3"><button className="tele" title="lancer le telechargement" ><a href={getDownloadLink(valeur.lien)}  target="_blank" rel="noopener noreferrer" download >  telecharger</a></button></p>
+       <p className="bouton3"><button id={valeur.id} onClick={prendre} className="tele" title="lire le livre" >consulter un livre</button></p>
     </section>
     </div>
 
@@ -106,7 +112,7 @@ return(
 <>
               
     <header> 
-        <h1 className="titre" onClick={()=>(aller('/'))} >CoursSearch</h1>   
+        <h1 className="titre" onClick={()=>(aller('/'))} >ThinkCore</h1>   
         <section className="main2">
            <input className="barre_recherche2" onKeyDown={(e)=>{ if(e.key=="Enter"){envoi()} }} type="text"  value={champs} onChange={(e)=>{setchamp(e.target.value);}}  name="nom"  /><button onClick={envoi} className="search2" title="cliquer pour rechercher" ></button>
         </section>

@@ -444,7 +444,7 @@ justify-content: center;
 .corps_resul{
   min-height: 100vh;
     position: absolute;
-    top: -25em;
+    top: -19em;
     width: 100%;
     margin: auto;
     display: flex;
@@ -476,6 +476,20 @@ justify-content: center;
 }
 
 
+@media(width:390px){
+
+.corps_resul{
+  min-height: 100vh;
+    position: absolute;
+    top: -18em;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
 
 @media(width:360px){
 

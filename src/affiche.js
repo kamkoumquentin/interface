@@ -61,7 +61,7 @@ var prendre= (e)=>{
 if( Array.isArray(tab) && tab.length!= 0){
 
 return(
-<>
+<div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"relative",width:"98vw",minHeight:"100vh"}}>
     <header> 
         <h1 className="titre" onClick={()=>(aller('/'))} >Thinkcore</h1>   
         <section className="main2">
@@ -102,7 +102,7 @@ return(
            
       </main>
 
-</>)
+</div>)
 
 
  }

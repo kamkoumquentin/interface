@@ -36,8 +36,6 @@ code {
   width: 100%;
  
   position: relative;
-
-
   background-repeat: no-repeat;
   background-size: cover ;
  
@@ -192,16 +190,17 @@ justify-content: center;
 
 
 .corps_resul{
-  min-height: 100vh;
     position: absolute;
-    top: -15em;
-    width: 100%;
-    margin: auto;
+    top: 4em;
+    width: 98vw;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   
+    
+    
 }
+
 
 
 img{
@@ -288,10 +287,6 @@ margin-top: 3em;
 }
 
 
-#per1{
-
-    margin-top: 3em;
-}
 
 /*nouveaux*/
 .produit{
@@ -442,16 +437,14 @@ justify-content: center;
 }
 
 .corps_resul{
-  min-height: 100vh;
-    position: absolute;
-    top: -22em;
-    width: 100%;
-    margin: auto;
+  position: absolute;
+    top: 4em;
+    width: 98vw;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
+
 
 
 }
@@ -461,15 +454,13 @@ justify-content: center;
 @media(max-width:375px){
 
 .corps_resul{
-  min-height: 100vh;
-    position: absolute;
-    top: -18em;
-    width: 100%;
-    margin: auto;
+  position: absolute;
+    top: 4em;
+    width: 98vw;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   
 }
 
 
@@ -482,31 +473,31 @@ justify-content: center;
 @media(max-width:390px){
 
 .corps_resul{
-  min-height: 100vh;
-    position: absolute;
-    top: -18em;
-    width: 100%;
-    margin: auto;
+  position: absolute;
+    top: 4em;
+    width: 98vw;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   
 }
+
+
 }
 
 @media(max-width:360px){
 
 .corps_resul{
-  min-height: 100vh;
-    position: absolute;
-    top: -10em;
-    width: 100%;
-    margin: auto;
+  position: absolute;
+    top: 4em;
+    width: 98vw;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   
 }
+
+
 
 
 }
